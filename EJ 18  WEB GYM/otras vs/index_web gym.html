@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WEB GYM CECI </title>
+    <link rel="stylesheet" href="style_webgym.css">
+    <script>
+      window.onload = function() {
+        primerp = document.getElementsByTagName("article")[0];
+        primerp.innerHTML = document.body.scrollWidth;
+        window.onresize = function() {
+          primerp.innerHTML = "Ancho de pantalla:" + document.body.scrollWidth;
+        };
+      }
+    </script>
+</head>
+  
+<body>
+    <!-- el Header se va a dividir en tres partes dos a la izquierda logo y nombre de la empresa
+    y a la derecha se va a poner un cuadro con la dirección y el teléfono-->
+  
+    <header>
+    
+        <div id="imagen"> 
+          <picture>
+            <source media="(min-width: 1200px)" srcset="imagenes\logo1_150.png">
+            <source media="(min-width: 800px)" srcset="imagenes\logo1_80.png">
+            <source media="(min-width: 480px)" srcset="imagenes\logo1_45.png">
+            <img src="imagenes/logo1.jpg" alt="gym">
+          </picture>
+        </div>
+    
+        <div id="nombre">
+          <h1> Fitness Club </h1> 
+          <h2> Porque sabemos lo que te sienta bien. </h2>
+        </div>
+    
+        <div id="direccion">
+          <p>Dirección</p>
+          <p>Calle Doctor Marañon 3</p>
+          <p>38207 - San Cristóbal de la Laguna</p>
+        </div>
+
+    </header>
+ 
+  <!-- cuerpo principal -->
+  <div id='cuerpo'>
+
+    <nav class="navegacion">
+      <ul class="menu">
+        
+        <li><a href="principal.html" target="contenido"> Actividades </a></li>
+        
+        <li><a href="#"> Cursos </a>
+          <ul>
+            <li><a href="animales.html#hipo" target="contenido"> Yoga training  </a></li>
+            <li><a href="animales.html#elefante" target="contenido"> Karate training </a></li>
+          </ul>
+        </li>	
+        
+        <li><a href="#"> Hazte socio </a> </li>
+
+      </ul>
+    </nav>
+
+
+    
+    <article>Aqui va el article</article>
+    
+    <aside>Aqui va el aside</aside>
+ 
+  </div>
+ 
+ <footer>Aqui va el footer</footer>
+
+</body>
+</html>

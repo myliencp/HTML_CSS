@@ -1,0 +1,118 @@
+html {
+    background: url('imagenes/fondo\ html.jpg');
+    color: white;
+}
+header {
+    display:inline-block;
+    width: 900px;
+    text-align: left;
+}
+h1,h3{
+    text-align: center;
+}
+
+body {
+    margin-left: 10px;
+}
+nav
+{
+    display: inline-block;
+    width: 900px;
+    text-align: right;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+body
+{
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color:black bold;
+    margin-left: 20px;
+}
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+ 
+ 
+textarea {
+    width:380px;
+    height:27px;
+    background:#666666;
+    border:2px solid #f6f6f6;
+    padding:10px;
+    margin-top:5px;
+    font-size:20px;
+    color:black;
+}
+ 
+textarea {
+    height:150px;
+}
+
+#botones {
+    height: 60px;
+    border:1px solid black;
+
+}
+#botones input {
+    width: 30%;
+    height: 30px;
+}
+
+#borrar {
+    margin-left: 2%;
+}
+
+#enviar {
+    margin-left: 320px;
+}
+
+#colores {
+    width: 50px;
+}
+ 
+#inscripcion {
+    float: left;
+    width: 45%;
+    height: 220px;
+       
+}
+#cuota{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+}
+
+#comentario {
+    float: right;
+    width: 45%;
+    height: 220px;
+}
+#nombre {
+    width: 777px;
+}
+#apellidos{
+    width: 773px;
+}
+#direccion{
+    width: 773px;
+}
+
+
+#correo {
+    width: 700px;
+}
+

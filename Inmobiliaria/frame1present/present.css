@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(imagenes/fondo2.jpg);
+} 
+#seccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;             
+}  
+article {
+    width: 100%;
+    color: black;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+h2,h3{
+    text-align: center;
+    font-weight: bold;
+    
+}
+h3{
+    font-style: italic;
+}
+
+p{
+    color:black;
+    font-weight: bold;
+}
+
+aside {
+    width: 40%;
+}
+
+
+/*efecto polaroid */
+
+figure.polaroid {
+    position: absolute;
+    width: 250px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid gray;
+    background-color: white;
+    box-shadow: 10px 10px 5px white;
+} 
+
+figure.rotate_1 {
+    z-index: 4; /*este es la segunda*/
+    float: left;
+    margin-left: 3%;
+    margin-top: calc(10% + 5vw);
+    transform: rotate(8deg);
+}
+
+figure.rotate_2 {
+    z-index: 3; /*este es la primera*/
+    float: right;
+    margin-left: 5%;
+    margin-top: 1%;
+    transform: rotate(-4deg);
+    text-align: right;
+}
+   
+
+@media all and (max-width: 800px) 
+    {
+        #seccion {
+            display: flex;
+            flex-direction: column-reverse;
+            
+        }
+        article {
+            width: 100%;
+            margin-top: 75%;
+        }
+        aside {
+            width:100%;
+        }
+
+}

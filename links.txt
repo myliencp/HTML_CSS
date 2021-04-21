@@ -1,0 +1,15 @@
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/css-only-carousel/
+https://www.w3schools.com/cssref/css_selectors.asp
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp---Menu Lateral
+https://www.mclibre.org/consultar/htmlcss/html/html-unicode-simbolos.html -----ICONOS----
+https://fontawesome.com/
+https://fontawesome.com/how-to-use/customizing-wordpress/snippets/setup-cdn-webfont
+https://www.countryflags.io/
+https://leafletjs.com/ -----JavaScript library
+https://www.sss-media.com/desarrollo-web/que-es-la-semantica-en-html-y-porque-te-debe-importar/
+https://www.mclibre.org/consultar/htmlcss/html/html-formularios.html
+
+IP Dardo: 192.168.46.207
+
+

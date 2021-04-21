@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+</head>
+<body>
+<h1>Calculadora</h1>
+<input type="text" id="arg1" size="1"> X <input type="text" id="arg2" size="1">
+<input type="button" value="Calcular!" onclick="calc()"> 
+<div id="result"></div>
+<script type="text/javascript">
+function calc(){
+var argOne=document.getElementById('arg1').value; 
+var argTwo=document.getElementById('arg2').value;
+var ans=(argOne*argTwo); 
+document.getElementById('result').innerHTML=argOne + ' multiplicado por ' + argTwo + ' es igual a ' + ans;
+}
+</script>
+</body>
+</html>   

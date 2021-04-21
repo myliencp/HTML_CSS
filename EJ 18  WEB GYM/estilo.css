@@ -1,0 +1,277 @@
+@font-face
+{
+    font-family: 'Staccato';
+    src: url('fonts/staccato-222-bt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 24px Helvetica;
+    background-image: url(imagenes/fondo.jpg);
+   }
+ 
+
+/* Para alinear los elementos dentro del header de forma horizontal 
+justify-content
+Para alinear los items en vertical
+align-items
+*/
+
+header {
+    display: flex;
+    /* align-items: stretch; */
+    /* justify-content: stretch;*/
+    font-size: 60%;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+};
+header h1 {
+    font-family: 'Staccato', serif;
+    font-size: 2.5em;
+    line-height: 1em;
+    color: #e20088;
+    margin-left: 15px;
+}
+
+/*primera letra del h1 */
+h1::first-letter {
+    font-size: 2.0em;
+}
+
+header h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #0ba452;
+    margin-left: 15px;
+}
+
+/*imagen del logo */
+#imagen img {
+    max-width: 150px;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+#direccion {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    margin-left: auto; /* manda el bloque de direccion a la derecha */
+    color: gray;
+}
+
+/* ACA DEFINO EL FLEX DEL CUERPO */
+#cuerpo {
+    min-height: 700px;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex; /*indicaciones para un navegador */
+    display:         flex; /*indicaciones xa otro navegador */
+    -webkit-flex-flow: row;
+            flex-flow: row;
+    min-height: calc(100vh - 100px);
+}
+
+/* NAVEGACION VERTICAL */
+#cuerpo > nav { /*box nav */
+    margin: 4px;
+    border-radius: 7pt;
+    background: linear-gradient(90deg, rgb(77, 76, 20) 0%,  rgb(143, 141, 101) 35%, rgb(128, 126, 9) 100%);
+    -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+    -webkit-order: 1;
+            order: 1; }
+ul, ol{ 
+    list-style: none; /* QUITO VIÑETAS */
+    padding-inline-start: 10px;
+    display: block;
+}
+
+/* article vertical */
+#cuerpo > article {
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7pt;
+    -webkit-flex: 3 1 60%;
+            flex: 3 1 60%;
+    -webkit-order: 2;
+            order: 2;
+}
+
+/* aside vertical */
+#cuerpo > aside {
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7pt;
+    background: linear-gradient(90deg, rgb(77, 76, 20) 0%,  rgb(143, 141, 101) 35%, rgb(128, 126, 9) 100%);
+    order: 3;
+}
+
+aside ul.news h5 {
+    font-family: 'Staccato', serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 4vh;
+    margin: 0;
+    color:black;
+    text-align: center;
+}
+
+aside ul.news li a {
+    color: black;
+    font-weight: bold;
+    font-size: 0.6em;
+    line-height: 7vh;
+}
+
+
+/* blox footer es display para que no cambie de posicion */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    background: whitesmoke;
+}
+
+ /* la lista con clase final, se dispone como flex dentro del footer */
+ul.final {
+    display: flex; 
+    flex-direction: row;
+    align-content: space-around;
+    width: 100%;
+}
+ul.final li a{
+    flex-direction: row;
+    align-content: space-around;
+}
+ /* box de los elementos li de la lista ul final */
+/* ul.final li {
+    border-right: 0.1px solid #1877f2;
+    margin: 0.2em;
+    padding: 0.2em;
+} */
+ /* hipervinculo a dentro de estas listas */
+/* ul.final li a:link {
+    text-decoration: none;
+    color: #1877f2;
+} */
+
+
+
+
+
+/* Cuando hay muy poco ancho para 3 columnas */
+
+@media all and (max-width: 800px) 
+{
+    #cuerpo {
+        -webkit-flex-flow: column;
+                flex-flow: column;
+    }
+
+    #cuerpo > nav, #cuerpo > aside, header, footer {
+        min-height: 80px;
+        max-height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 0.8em;
+        line-height: 0.8em;
+    }
+
+    #direccion {
+        font-size: 0.6em;
+    }
+
+    #imagen img {
+        max-width: 80%;
+    } 
+    
+    /* NAVEGACION HORIZONTAL */
+    nav { /*box nav */
+    background: #471b72;}
+    ul, ol{ /* QUITO VIÑETAS */list-style: none;}
+    /*toco las listas con .menu */
+    .menu li a:hover {
+	background-color: plum;}
+    .menu > li{ /*esto permite que solo las listas de primer nivel cuelguen del menu*/
+    float: left;}
+    .menu li a { /*box de cada elemento de la lista */
+	background-color: #471b72;
+	color:whitesmoke;
+	text-decoration:none;
+   	padding: 5px 12px;
+	display:block;
+	font-size: 1em;}
+    .menu li ul { /* segundo nivel*/
+	display:none;
+	position:absolute;
+	min-width:100px;}
+    .menu li:hover > ul {
+	display:block;}
+    .menu li ul li { /*segundo nivel */
+    position: relative;
+    margin-left: 0px;}
+
+
+}
+
+/* animacion del header 
+hecha con: https://animista.net/
+es solo copiar el codigo que te dan y ponerle la clase a tu elemento */
+.tracking-in-contract-bck-bottom {
+	-webkit-animation: tracking-in-contract-bck-bottom 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+	        animation: tracking-in-contract-bck-bottom 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(300px);
+              transform: translateZ(400px) translateY(300px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck-bottom {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(300px);
+              transform: translateZ(400px) translateY(300px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+/* animacion del header 
+hecha con: https://animista.net/
+http://css3generator.com/
+*/
+
+
+
+
+
+ 

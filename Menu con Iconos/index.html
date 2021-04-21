@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="idiomas.css">
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" id="boton" class="dropbtn bandera es">
+        Español
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <a id="ingles" class="bandera en" href="#ingles">Inglés</a>
+        <a id="aleman" class="bandera de" href="#aleman">Alemán</a>
+        <a id="español" class="bandera es" href="#español">Español</a>
+      </div>
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("mostrar");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".boton")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

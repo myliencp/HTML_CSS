@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de la Empresa</title>
+    <!-- Este ejemplo esta pensaddo para complementarlo con Charjs
+    https://norfipc.com/codigos/como-crear-insertar-graficos-chart.js-paginas-web.php -->
+    <style>
+        body {
+            display: flexbox;
+        }
+        nav {
+            min-height: 5vh;
+            background-color: violet;
+        }
+        #cuerpo {
+            min-height: 73vh;
+            display: flex;
+            flex-flow: row;
+         /*    flex-wrap:wrap; */ /* ajusta los elementos a 1 columna */
+        }
+        article {
+            flex: 3;
+            background-color: yellow;
+        }
+        aside {
+            flex: 1;
+            background-color:grey;
+        }
+        header {
+            display: flex;
+            min-height: 10vh;
+            background-color: wheat;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer {
+            min-height: 10vh;
+            background-color: green;
+        }
+        img {
+            padding-left: 5px;
+            height: 6vh;
+            
+        }
+        #titulo {
+            display: flex;
+            flex-direction: row;
+        }
+        #direccion {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            margin-right: 3vw;
+        }
+        p {
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        h1 {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+            padding-left: 3px;
+        }
+        h3 {
+            padding-left: 2%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-rows: repeat(auto-fit, 100px);
+            grid-template-columns: 0.5fr  0.2fr 0.2fr 0.2fr;
+            width: 40%;
+            padding-left: 2%;
+        }
+        .grid-item {
+            border: black 1px solid;
+            background: rgb(223, 221, 221);
+            text-align: right;
+            font-weight:bold;
+            /*align-self: center; Me permite dar la altura de  las filas a su contenido */
+        }
+        .grid-title{
+            background: chartreuse;
+            align-self: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <img src="imagenes/logo.png" alt="">
+            <h1>Nombre de la Empresa</h1>
+        </div>
+        <div id="direccion">
+            <p>Direccion</p>
+            <p>Telefono</p>
+            <p>Mail</p>
+        </div>
+    </header>
+    <nav>
+        <p>Listado de direcciones</p>
+    </nav>
+    <div id="cuerpo">
+        <article>
+            <!-- .grid-container>.grid-title*4+(.grid-title+.griditem*3)*8 -->
+            
+            <h3>Listado Turistas por isla en miles</h3>
+            <div class="grid-container">
+                <div class="grid-title">Contagios</div>
+                <div class="grid-title">2017</div>
+                <div class="grid-title">2018</div>
+                <div class="grid-title">2019</div>
+                <div class="grid-title">Tenerife</div>
+                <div class="grid-item">4760</div>
+                <div class="grid-item">4890</div>
+                <div class="grid-item">5729</div>
+                <div class="grid-title">Gran Canaria</div>
+                <div class="grid-item">3850</div>
+                <div class="grid-item">3990</div>
+                <div class="grid-item">4189</div>
+                <div class="grid-title">La Palma</div>
+                <div class="grid-item">190</div>
+                <div class="grid-item">232</div>
+                <div class="grid-item">258</div>
+                <div class="grid-title">La Gomera</div>
+                <div class="grid-item">75</div>
+                <div class="grid-item">80</div>
+                <div class="grid-item">90</div>
+                <div class="grid-title">Fuerteventura</div>
+                <div class="grid-item">1430</div>
+                <div class="grid-item">1650</div>
+                <div class="grid-item">1895</div>
+                <div class="grid-title">El Hierro</div>
+                <div class="grid-item">21</div>
+                <div class="grid-item">30</div>
+                <div class="grid-item">37</div>
+                <div class="grid-title">Lanzarote</div>
+                <div class="grid-item">1757</div>
+                <div class="grid-item">1982</div>
+                <div class="grid-item">2110</div>
+                <div class="grid-title">La Graciosa</div>
+                <div class="grid-item">715</div>
+                <div class="grid-item">850</div>
+                <div class="grid-item">903</div>
+            </div>
+            <h3>* Informacíon obtenida del censo de visitantes portuarios y aeroportuarios de canarias</h3>
+        </article>
+        <aside>Información lateral</aside>
+    </div>
+    <footer>Pie de pagina</footer>
+</body>
+</html>

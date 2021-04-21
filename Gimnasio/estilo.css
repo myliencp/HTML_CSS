@@ -1,0 +1,411 @@
+body {
+    font: Arial, Helvetica, sans-serif;;
+    background: url(Imagenes/fondo2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+ 
+
+header {
+    display: flex;
+    font-size: 70%;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    align-items: center;
+    text-align: center
+};
+
+@media (max-width: 1000px){
+    header{
+            /* Reverse the axis of the header, making it vertical. */
+            flex-direction: column;
+            
+            /* Align items to the begining (the left) of the header. */
+            align-items: flex-start;
+    }
+}
+header h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    color: black;
+    margin-left: 15px;
+}
+
+/*primera letra del h1 */
+h1::first-letter {
+    font-size: 2em;
+}
+
+header h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #eef5f1;
+    margin-left: 15px;
+    text-shadow: black;
+}
+
+/*imagen del logo */
+#imagen img {
+    max-width:150px;
+    padding: 5px;
+    border-radius: 40%;
+}
+.footer-left img{
+    max-width:50px;
+    padding: 5px;
+    border-radius: 40%;
+}
+/* #direccion {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    margin-left: auto; /* manda el bloque de direccion a la derecha */
+    /* color: whitesmoke; */
+    /* } */ 
+
+
+/* ACA DEFINO EL FLEX DEL CUERPO */
+#cuerpo {
+    min-height: 700px;
+    margin: 0px;
+    padding: 0px;
+    display:flex;           
+    min-height: calc(100vh - 100px);
+}
+
+/* NAVEGACION VERTICAL */
+
+ul, ol{ 
+    list-style: none; /* QUITO VIÑETAS */
+    padding-inline-start: 10px;
+    display: block;
+}
+
+/* article vertical */
+#cuerpo > article {
+    height: 815px;
+    position: static;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 10pt;
+    -webkit-flex: 3 1 60%;
+            flex: 3 1 60%;
+    -webkit-order: 2;
+            order: 2;
+}
+
+/* aside vertical */
+#cuerpo > aside {
+    width: calc(20% - 20px);    
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7pt;
+    background: linear-gradient(90deg, rgb(192, 70, 25) 0%,  rgb(99, 62, 49) 35%, rgb(194, 58, 8) 100%);
+    order: 3;
+}
+
+aside ul.news h5 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 4vh;
+    margin: 0;
+    color:black;
+    text-align: center;
+    margin-bottom: 5%;
+}
+aside ul.news p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    text-align:justify
+}
+
+aside ul.news a{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;  
+    
+
+}
+
+
+
+
+
+
+
+/* blox footer es display para que no cambie de posicion */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/* The footer is fixed to the bottom of the page */
+
+footer{	
+    bottom: 0;    
+}   
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #333;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    margin-left: 5%;
+	width: 20%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 26px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 20%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    margin-left: 5%;
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    margin-left: 4%;
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+
+
+/* Cuando hay muy poco ancho para 3 columnas */
+
+@media all and (max-width: 800px) 
+{
+    #cuerpo {
+        -webkit-flex-flow: column;
+                flex-flow: column;
+    }
+
+     header, footer {
+        min-height: 80px;
+        max-height: 80px;
+    }
+    #cuerpo > aside{
+        width: 98%;        
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 0.8em;
+        line-height: 0.8em;
+    }
+
+    /* #direccion {
+        font-size: 0.6em;
+    } */
+
+    #imagen img {
+        max-width: 80%;
+    } 
+    
+    
+
+
+}
+
+/* animacion del header 
+hecha con: https://animista.net/
+es solo copiar el codigo que te dan y ponerle la clase a tu elemento */
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}   
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+/* animacion del header 
+hecha con: https://animista.net/
+http://css3generator.com/
+*/
+
+
+
+
+
+ 

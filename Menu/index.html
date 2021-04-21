@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=but, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 4vh;
+            background-color: black;
+        }
+        article{
+            height: 90vh;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .boton{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: red;    
+            color: white;   
+            font-size: 14px;
+            border: none;
+            height: 30px;
+            width: 150px;
+            cursor: pointer;
+            
+         }
+
+        .boton:hover{
+             background-color: rgb(216, 103, 103);
+         }
+
+        .es:hover {
+            background-color: rgb(216, 103, 103);
+         }
+        .gb:hover{
+            background-color: rgb(216, 103, 103);
+         }
+        .de:hover{
+            background-color: rgb(216, 103, 103);
+         }
+        .fr:hover{
+            background-color: rgb(216, 103, 103);
+         }
+        .desplegable{
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+
+        }
+        .desplegable a{
+            color: black;
+            display: block;
+            text-decoration: none;
+            padding: 12px 50px;
+           
+            
+       
+        }
+        .mostrar{
+            display: block;
+        }
+        .es{
+            background-image: url(https://www.countryflags.io/es/flat/32.png);
+            background-repeat: no-repeat;
+            background-position: 3% 50%;
+            
+            
+                      
+        }
+        .gb{
+            background-image: url(https://www.countryflags.io/gb/flat/32.png);
+            background-repeat: no-repeat;
+            background-position: 3% 50%;
+          
+           
+        }
+        .de{
+            background-image: url(https://www.countryflags.io/de/flat/32.png);
+            background-repeat: no-repeat;
+            background-position: 3% 50%;
+           
+            
+        }
+        .fr{
+            background-image: url(https://www.countryflags.io/fr/flat/32.png);
+            background-repeat: no-repeat;
+            background-position: 3% 50%;          
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="idiomas">
+            <button onclick="cambiaIdioma()" id="boton" class="boton es">Español</button>
+            <div id="desplegable" class="desplegable">
+                <a onclick="selIdioma()" id="ingles" class="gb" href="#">Ingles</a>
+                <a onclick="selIdioma()" id="aleman" class="de" href="#">Aleman</a>
+                <a onclick="selIdioma()" id="frances" class="fr" href="#">Frances</a>
+                <a onclick="selIdioma()" id="español" class="es" href="#">Español</a>
+            </div>
+        </div>
+    </header>    
+    <article>
+        <img src="imagenes/slide 3.jpg" alt="">
+    </article>   
+    <script>
+        function cambiaIdioma() {
+            document.getElementById("desplegable").classList.toggle("mostrar");    
+        }
+        function selIdioma() {
+            console.log(event.target);
+            document.getElementById("boton").innerHTML = event.target.innerHTML;
+            document.getElementById("boton").classList ="";
+            document.getElementById("boton").classList =event.target.classList;
+            document.getElementById("boton").classList.add("boton");
+                    
+        }
+        window.onclick = function(event){
+            if (!event.target.matches("#boton") && document.getElementById
+            ("desplegable").classList.contains("mostrar")){
+                cambiaIdioma();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+h1{
+    text-align: center;
+}
+
+#submit{
+    background-image: url(img/icono.png) no-repeat left center;
+    padding-left: 40px;
+}
+
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+    background-color:#ccc;
+    /* background-image: url(img/slide\ 1.jpg); */
+}
+
+form label{
+    height: 25px;
+	width:72px;
+    font-weight:bold;
+   
+	
+}
+
+form input[type="text"],
+form input[type="email"]{
+    height: 20px;
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+#nombre,#año,#sexo,#correo,#comentario,#fecha,#nacimiento,#color,#fichero,#listado{
+    
+    background-color:rgb(119, 117, 117);
+    
+    
+}
+ 
+#nombre input,#año input,#correo input,#comentario input,textarea{
+  
+    display: flex;
+    flex-direction: column;
+    width: 278px;
+}
+
+    
+#boton input{
+    width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+    background-color:#000;      
+
+}
+
+#boton input:hover{
+	cursor:pointer;
+}
+
+
+
+
+

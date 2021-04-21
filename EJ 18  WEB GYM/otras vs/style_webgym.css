@@ -1,0 +1,212 @@
+@font-face
+{
+    font-family: 'Staccato';
+    src: url('fonts/staccato-222-bt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 24px Helvetica;
+    background: #999999;
+   }
+ 
+#cuerpo {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+
+    /* tipo flex*/
+    display: -webkit-flex;
+    display:         flex;
+
+    /* al flex hay que def la posicion: horizontal en este caso */
+    -webkit-flex-flow: row;
+            flex-flow: row;
+}
+
+/* Repasar estos conceptos
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: auto
+*/    
+
+#cuerpo > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+    -webkit-order: 1;
+            order: 1;
+}
+
+#cuerpo > article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+    background: #dddd88;
+    -webkit-flex: 3 1 60%;
+            flex: 3 1 60%;
+    -webkit-order: 2;
+            order: 2;
+}
+
+#cuerpo > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+    -webkit-order: 3;
+            order: 3;
+}
+
+/* Para alinear los elementos dentro del header de forma horizontal 
+justify-content
+Para alinear los items en vertical
+align-items
+*/
+
+header {
+    display: flex;
+    /* align-items: stretch; */
+    /* justify-content: stretch;*/
+    font-size: 60%;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border-radius: 7pt;
+    background:purple;
+}
+
+header h1 {
+    font-family: 'Staccato', serif;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    color: whitesmoke;
+}
+
+header h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: whitesmoke;
+}
+
+
+#imagen img {
+    max-width: 200px;
+    padding: 5px;
+}
+
+#direccion {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4em;
+    color: whitesmoke;
+}
+
+footer {
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 1px solid #eebb55;
+    border-radius: 7pt;
+    background: #ffeebb;
+}
+
+/* menu */
+.navegacion{
+	width: 1000px;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+.menu {
+	margin-left: 35%;
+}
+.menu > li{ /*esto permite que solo las listas de primer nivel cuelguen del menu*/
+	float: left;
+}
+
+.menu li a {
+	background-color:purple;
+	color: whitesmoke;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+	font-size: larger;
+}
+
+.menu li a:hover {
+	background-color: palevioletred;
+}
+
+.menu li ul {
+	display:none;
+	position:absolute;
+	min-width:100px;
+}
+
+.menu li:hover > ul {
+	display:block;
+}
+
+.menu li ul li {
+	position:relative;
+}
+
+.menu li ul li ul {
+	right:-140px;
+	top:0px;
+}
+
+
+
+/* lo que sigue es cuando hay cambio de tamaño */
+/* Cuando hay muy poco ancho para 3 columnas */
+
+@media all and (max-width: 800px) 
+{
+    #cuerpo {
+        -webkit-flex-flow: column;
+                flex-flow: column;
+    }
+
+    #cuerpo > nav, #cuerpo > aside, header, footer {
+        min-height: 60px;
+        max-height: 60px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 0.8em;
+        line-height: 0.8em;
+    }
+
+    #direccion {
+        font-size: 0.4em;
+    }
+
+    #imagen img {
+        max-width: 80%;
+    }        
+
+}
+
+
+
+
+
+ 

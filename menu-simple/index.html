@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Simple con HTML Y CSS</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+		<h1>Zoológico de Schönbrunn</h1>
+		<h2>Tipos de animales de nuestro Zoológico</h2>
+		<nav class="navegacion">
+			<ul class="menu">
+				<li><a href="principal.html" target="contenido">Inicio</a></li>
+				<li><a href="#">Hervíboros</a>
+					<ul>
+						<li><a href="#">Hipopótamo</a></li>
+						<li><a href="#">Elefante</a></li>
+						<li><a href="#">Rinoceronte</a></li>
+					</ul>
+				</li>	
+				<li><a href="#">Carnívoros</a>
+					<ul>
+						<li><a href="#">Tigre</a></li>
+						<li><a href="#">Leon</a></li>
+						<li><a href="#">Puma</a></li>
+					</ul>
+				</li>	
+				<li><a href="#">Omnívoros</a>
+					<ul>
+						<li><a href="#">Oso</a></li>
+						<li><a href="#">Jabalí</a></li>
+						<li><a href="#">Zorro</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<!-- <iframe src="principal.html" width="660" height="280" scrolling="auto"> -->
+		<!-- https://www.lawebera.es/como-hacer/ejemplos-css/simular-frames-marcos-con-html-y-css.php	
+			De aqui se pueden sacar mas ideas para frames
+		Texto alternativo para navegadores que no aceptan iframes
+		</iframe> -->
+		<iframe name="contenido" src="principal.html" width=100% height="340" scrolling="auto">
+			iFrames no soportado
+		</iframe>
+	</article>
+</body>
+</html>

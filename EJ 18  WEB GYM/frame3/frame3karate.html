@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> karate </title>
+
+    <style>
+    /* estilo de frame 3 */
+        
+        header h1 {
+            background: linear-gradient(to bottom, #efbaaf 0%, beige 14%, #edefec 100%);
+           
+            /*agrego espacio*/
+            width: 30%;
+            border-radius: 10px; /* borde curvos*/
+            margin: 50px auto; /* top right bottom left */
+            text-align: center; 
+            padding: 15px;
+            
+            /*efecto 3d del texto */
+            box-shadow: gray 5px 5px 10px;
+            text-shadow: ivory 2px 2px 3px; 
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+        }
+
+        header h2 {
+            color: black;
+        }
+
+        section {
+            width: 80%;
+            color: black;
+            margin: 0.5em;
+
+        }
+
+        article {
+            width: 60%;
+            float: left;
+            text-align: justify;
+            line-height: 25px;
+        }
+
+        aside {
+            float: left;
+        }
+
+        /*efecto polaroid */
+        figure.polaroid {
+            position: absolute;
+            width: 300px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid gray;
+            background-color: white;
+            box-shadow: 10px 10px 5px white;
+        }
+        figure.rotate_1 {
+            z-index: 4; /*este es la segunda*/
+            float: left;
+            margin-left: 5%;
+            margin-top: 12%;
+            transform: rotate(8deg);
+        }
+        figure.rotate_2 {
+            z-index: 3; /*este es la primera*/
+            float: right;
+            margin-left: 9%;
+            margin-top: -3%;
+            transform: rotate(-4deg);
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Karate Training  </h1> 
+        <h2> Sé tu mejor maestro... </h2>
+    
+    </header>
+
+    <section>
+
+        <article>
+            <p> Existen infinidad de circunstancias que nos pueden llevar a buscar una inmobiliaria. 
+                Desde un nacimiento, a un matrimonio, hasta un divorcio o una defunción. 
+                Algunos clientes tienen referencias de vendedores o compradores anteriores, otros acuden porque viven o 
+                trabajan cerca de la inmobiliaria, aunque cada vez estamos más acostumbrados a realizar las compras y 
+                la búsqueda de servicios por Internet. </p>
+            <p> Somos una inmobiliaria familiar nacida en el 2001 y con experiencia en el sector desde 1992, 
+                somos diferentes porque trabajamos de un modo distinto. ¿Nos das la oportunidad de demostrártelo? </p>
+            <p> Nuestras gestiones son siempre claras y transparentes tanto si deseas vender, comprar o alquilar un inmueble,
+                buscamos la mejor opción para ti. Evitamos pérdidas de tiempo y trámites innecesarios y sobre todo te garantizamos 
+                un inmejorable trato personal y profesional.</p>
+            <p> La mejor publicidad es, sin duda, la satisfacción de todos los clientes, 
+                sois vosotros los que en muchísimas ocasiones recomendáis nuestros servicios con la garantía de vuestra propia experiencia. 
+                No queremos para ti lo que no querríamos para nosotros.</p>
+            <p> TuCasa ofrece unas excelentes condiciones de financiación a los compradores, gracias a un convenio de colaboración 
+                con ocho entidades bancarias. Señalamos que la negativa de la financiación por parte del banco suele ser la razón 
+                principal por la que fracasan los procesos de compraventa. </p>
+            <p> En esta primera fase de filtrado se resuelven todas las dudas relacionadas con la vivienda y 
+                se detalla todo el procedimiento de la transacción al comprador. En la segunda fase de filtrado, 
+                cuando sólo quedan los verdaderos interesados en la vivienda, se realiza la visita. </p>
+            <p> Si hay un piso en el que el comprador esté interesado debería llamar a la inmobiliaria o contactar por correo
+                electrónico o chat online. Así se les informará de los requisitos y condiciones, para después agendar la visita 
+                al inmueble según la disponibilidad del comprador.</p>
+        </article>
+
+        <aside>
+            
+            <figure class="polaroid rotate_1">
+                <img src="imagenes\karate300px.png" alt="karate 1" width="300" height="200">
+            </figure>
+        
+            <figure class="polaroid rotate_2">
+                <img src="imagenes\karate2_300px.png" alt="karate 2" width="300" height="200">
+            </figure>
+        
+
+        </aside>
+
+    </section>    
+    
+</body>
+
+</html>
+

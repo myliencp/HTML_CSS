@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inmobiliaria PalmaPlus</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Pagina web de la cual sacar el codigo para los accesos a facebook
+    https://developers.facebook.com/docs/plugins/like-button?locale=es_ES  -->
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0"
+    ></script>
+
+    <!-- La cabecera se va a dividir en tres partes dos a la izquierda logo y nombre de la empresa
+    y a la derecha se va a poner botones de Facebbok-->
+    <header>
+      <div id="imagen">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="imagenes\logo150.jpg"
+          />
+          <source media="(min-width: 800px)" srcset="imagenes\logo100.jpg" />
+          <source media="(min-width: 480px)" srcset="imagenes\logo40.jpg" />
+          <img src="imagenes/logo150.jpg" alt="Logo" />
+        </picture>
+      </div>
+
+      <div id="nombre">
+        <h1 class="tracking-in-contract-bck-bottom">Inmobiliaria PalmaPlus</h1>        
+      </div>     
+        <div
+          class="fb-like"
+          data-width=""
+          data-layout="button"
+          data-action="like"
+          data-size="small"
+          data-share="true"
+        ></div>     
+    </header>  
+
+    
+    <nav class="navegacion">
+        <div class="topnav" id="myTopnav">
+          <a href="frame1present/frame1present.html" target="elframe">Nuestras referencias</a>
+          <a href="frame2lista/frame2lista.html" target="elframe">Lista de propiedades</a>
+          <a href="frame3contacto/frame3contacto.html" target="elframe">¿Podemos ayudarle?</a>
+          <a href="frame4mapa/frame4mapa.html" target="elframe">Mapa</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </nav>
+
+
+    <article style="margin: 0px; padding: 0px; overflow: hidden">
+        <iframe
+          name="elframe"
+          src="frame1present/frame1present.html"
+          frameborder="0"
+          style="overflow: hidden; height: 100%; width: 100%"
+          height="100% "
+          width="100%"          
+        ></iframe>
+    </article>      
+    
+
+    <footer class="footer-distributed">
+			<div class="footer-left">
+          
+				<h3><span>HORARIO DE ATENCIÓN:</span></span></h3>
+            <p>Lunes a Viernes:</p>
+            <p> 10:00 – 14:30h / 16:00 – 19:30h</p>
+            <p class="footer-company-name">© 2021 Inmobiliaria PalmaPlus </p>
+			</div>
+
+			<div class="footer-center">        
+        <h3>NUESTROS VENDEDORES:</h3>
+            <div id="Antonio" >
+              <p>Antonio Márquez Silva</p>                
+              <p><i class="fa fa-phone"></i>&nbsp;(+34) 609 123 001</p>
+					 
+				    </div>
+            <div id="Clara" >
+              <p>Clara Gomez Perez</p>                
+              <p><i class="fa fa-phone"></i>&nbsp;(+34) 609 123 002</p>
+					 
+				    </div>
+            <div id="Gabriel" >
+              <p>Gabriel Romero Sanchez</p>                
+              <p><i class="fa fa-phone"></i>&nbsp;(+34) 609 123 003</p>
+					 
+				    </div>				
+			</div>	
+			
+		</footer> 
+    
+
+    
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaroid</title>
+    <style>
+        /* estilo de frame 1 */
+           html{
+               font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+              
+           }
+            
+            header h1 {
+                background: linear-gradient(to bottom, darkred 0%, beige 14%, lightblue 100%);
+               
+                /*agrego espacio*/
+                width: 95%;
+                font-size: calc(12px + 1.5vw);
+                border-radius: 10px; /* borde curvos*/
+                margin: 50px auto; /* top right bottom left */
+                text-align: center; 
+                padding: 15px;
+                
+                /*efecto 3d del texto */
+                box-shadow: gray 5px 5px 10px;
+                text-shadow: ivory 2px 2px 3px; 
+                margin-block-start: 0.3em;
+                margin-block-end: 0.3em;
+            }
+    
+            header h2 {
+                color: black;
+            }
+    
+            #seccion {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /* width: 80%;
+                color: black;
+                margin: 0.5em; */
+            }
+
+           
+    
+            article {
+                width: 60%;
+                /* float: left; */
+                text-align: justify;
+                line-height: 1.5em;
+            }
+    
+            aside {
+                /* float: left; */
+                width: 40%;
+            }
+    
+            /*efecto polaroid */
+            figure.polaroid {
+                position: absolute;
+                width: 300px;
+                padding: 10px 10px 20px 10px;
+                border: 1px solid gray;
+                background-color: white;
+                box-shadow: 10px 10px 5px white;
+            }
+
+            figure.rotate_3 {
+                z-index: 5; /*este es la primera*/
+                float: right;
+                margin-left: 10%;
+                margin-top: calc(20% + 5vw);
+                transform: rotate(-12deg);
+              
+            }      
+
+                   
+            figure.rotate_1 {
+                z-index: 4; /*este es la segunda*/
+                float: left;
+                margin-left: 5%;
+                margin-top: calc(5% + 5vw);
+                transform: rotate(8deg);
+            }
+            figure.rotate_2 {
+                z-index: 3; /*este es la primera*/
+                float: right;
+                margin-left: 9%;
+                margin-top: -3%;
+                transform: rotate(-4deg);
+                text-align: right;
+            }
+           
+    
+            @media all and (max-width: 800px) 
+            {
+                #seccion {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+                article {
+                    width: 100%;
+                    margin-top: 75%;
+                }
+                aside {
+                    width:100%;
+                }
+    
+            }
+        </style>
+    
+</head> 
+
+
+<body>
+
+    <header>
+
+        <h1> Alicia en el país de las maravillas </h1> 
+        <h2> "Literatura infantil, literatura del absurdo y cuento de hadas" </h2>
+    
+    </header>
+
+    <section id="seccion">
+
+        <article>
+            <p>Es una novela de fantasía escrita por el matemático, lógico, fotógrafo y escritor británico Charles Lutwidge Dodgson, bajo el seudónimo de Lewis Carroll, publicada en 1865. La historia cuenta cómo una niña llamada Alicia cae por un agujero, encontrándose en un mundo peculiar, poblado por humanos y criaturas antropomórficas. El libro juega con la lógica, dando a la novela gran popularidad tanto en niños como en adultos. Está considerada una de las mejores novelas del género del Sinsentido. Su narrativa y estructura, junto con sus personajes, han sido una gran influencia tanto en la cultura popular como en la literatura, sobre todo en el género fantástico. </p>
+            <p>En esta obra aparecen algunos de los personajes más famosos de Lewis Carroll, como el Conejo Blanco, la Liebre de Marzo, el Sombrerero, la Oruga azul, el Gato de Cheshire o la Reina de Corazones;1​ quienes han cobrado importancia suficiente como para ser reconocidos fuera del mundo de Alicia.</p>
+            <p>Solo se conservan 22 copias de la primera edición de 1865, de las cuales 17 pertenecen a distintas bibliotecas, y las restantes forman parte de las colecciones privadas de algunos lectores. El libro tiene una segunda parte, menos conocida, llamada A través del espejo y lo que Alicia encontró allí (Through the looking-glass, and what Alice found there, de 1871). Varias adaptaciones cinematográficas combinan elementos de ambos libros.</p>
+            <p>La obra ha sido traducida a numerosos idiomas, incluido el esperanto. En 1998, un ejemplar de la primera edición del libro se vendió en subasta por la suma de 1,5 millones de dólares, y se convirtió así en el libro para niños más caro hasta ese momento.​</p>
+        </article>
+
+        <aside>
+            
+            <figure class="polaroid rotate_1" onclick="cambiafondo1()">
+                <img src="imagenes/alicia 1.jpg" alt="alicia 1" width="300" height="200">
+            </figure>
+        
+            <figure class="polaroid rotate_2" onclick="cambiafondo3()">
+                <img src="imagenes/alicia 3.jpg" alt="alicia 2" width="300" height="200">
+            </figure>
+
+            <figure class="polaroid rotate_3" onclick="cambiafondo2()">
+                <img src="imagenes/alicia 2.jpg" alt="alicia 2" width="300" height="200">
+            </figure>
+          
+
+        </aside>
+
+    </section>   
+
+    <script  src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frame club</title>
+    <style>
+      header h1 {
+        background: linear-gradient(
+          to bottom,
+          #efbaaf 0%,
+          beige 14%,
+          #edefec 100%
+        );
+
+        /*agrego espacio*/
+        width: 30%;
+        border-radius: 10px; /* borde curvos*/
+        margin: 50px auto; /* top right bottom left */
+        text-align: center;
+        padding: 15px;
+        margin-block-start: 0.3em;
+        margin-block-end: 0.3em;
+
+        /*efecto 3d del texto */
+        box-shadow: gray 5px 5px 10px;
+        text-shadow: ivory 2px 2px 3px;
+      }
+      body {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        margin-left: 5%;
+      }
+
+      .carousel {
+        position: relative;
+        margin-top: 26px;
+      }
+
+      .carousel-inner {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
+
+      .carousel-item {
+        position: absolute;
+        opacity: 0;
+      }
+
+      .carousel-item img {
+        display: block;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.64);
+        height: auto;
+        width: 80vw;
+        max-height: 70vh;
+      }
+
+      .carousel-control {
+        background: rgba(0, 0, 0, 0.28);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        height: 40px;
+        line-height: 35px;
+        position: absolute;
+        top: 50%;
+        /* -webkit-transform: translate(0, -50%);*/
+        cursor: pointer;
+        /* -ms-transform: translate(0, -50%);*/
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;
+      }
+
+      .carousel-control.prev {
+        left: 7%;
+      }
+
+      .carousel-control.next {
+        right: 10%;
+      }
+
+      .carousel-control:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+      }
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3 {
+        display: block;
+      }
+      figcaption {
+        margin: 0.5em;
+        padding: 0.5em;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>El Club</h1>
+    </header>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <input
+          class="carousel-open"
+          type="radio"
+          id="carousel-1"
+          name="carousel"
+          aria-hidden="true"
+          hidden=""
+          checked="checked"
+        />
+        <div class="carousel-item">
+          <figure>
+            <img src="imagenes\1.jpg" />
+            <figcaption>Contamos con cancha de tenis</figcaption>
+          </figure>
+        </div>
+        <input
+          class="carousel-open"
+          type="radio"
+          id="carousel-2"
+          name="carousel"
+          aria-hidden="true"
+          hidden=""
+        />
+        <div class="carousel-item">
+          <figure>
+            <img src="imagenes\2.jpg" />
+            <figcaption>Una piscina para adultos</figcaption>
+          </figure>
+        </div>
+        <input
+          class="carousel-open"
+          type="radio"
+          id="carousel-3"
+          name="carousel"
+          aria-hidden="true"
+          hidden=""
+        />
+        <div class="carousel-item">
+          <figure>
+            <img src="imagenes\3.jpg" />
+            <figcaption>Intalaciones de atletismo</figcaption>
+          </figure>
+        </div>
+        <label for="carousel-3" class="carousel-control prev control-1"
+          >‹</label
+        >
+        <label for="carousel-2" class="carousel-control next control-1"
+          >›</label
+        >
+        <label for="carousel-1" class="carousel-control prev control-2"
+          >‹</label
+        >
+        <label for="carousel-3" class="carousel-control next control-2"
+          >›</label
+        >
+        <label for="carousel-2" class="carousel-control prev control-3"
+          >‹</label
+        >
+        <label for="carousel-1" class="carousel-control next control-3"
+          >›</label
+        >
+      </div>
+    </div>
+  </body>
+</html>

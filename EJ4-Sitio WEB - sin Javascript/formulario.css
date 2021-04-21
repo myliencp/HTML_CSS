@@ -1,0 +1,66 @@
+html {
+    background: url('imagenes/yellow_background.png');
+}
+header {
+    text-align: left;
+    padding:10px;
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+body
+{
+    display:inline-block;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #8d3838;
+}
+
+form{
+	width:300px;
+    padding:10px;
+    line-height: 30px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:90px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+input{
+    width: 160px;
+}
+
+#islas input {
+    width: 10px ;
+}
+ #licencia label {
+    width: 130px;
+ }
+
+ #licencia input {
+     width: 15px;
+ }
+
+ #botones {
+    display: block;
+    height: 30px;
+}
+#botones input {
+    width: 70px;
+}
+
+#borrar {
+    float: left;
+    margin-left: 2%;
+}
+
+#enviar {
+    float: right;
+    margin-right: 2%;
+}
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> yoga </title>
+
+    <style>
+    /* estilo de frame 1 */
+        
+        header h1 {
+            background: linear-gradient(to bottom, #efbaaf 0%, beige 14%, #edefec 100%);
+           
+            /*agrego espacio*/
+            width: 30vw;
+            font-size: calc(12px + 1.5vw);
+            border-radius: 10px; /* borde curvos*/
+            margin: 50px auto; /* top right bottom left */
+            text-align: center; 
+            padding: 15px;
+            
+            /*efecto 3d del texto */
+            box-shadow: gray 5px 5px 10px;
+            text-shadow: ivory 2px 2px 3px; 
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+        }
+
+        header h2 {
+            color: black;
+        }
+
+        #seccion {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* width: 80%;
+            color: black;
+            margin: 0.5em; */
+        }
+
+        article {
+            width: 60%;
+            /* float: left; */
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        aside {
+            /* float: left; */
+            width: 40%;
+        }
+
+        /*efecto polaroid */
+        figure.polaroid {
+            position: absolute;
+            width: 300px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid gray;
+            background-color: white;
+            box-shadow: 10px 10px 5px white;
+        }
+        
+        figure.rotate_1 {
+            z-index: 4; /*este es la segunda*/
+            float: left;
+            margin-left: 5%;
+            margin-top: 12%;
+            transform: rotate(8deg);
+        }
+        figure.rotate_2 {
+            z-index: 3; /*este es la primera*/
+            float: right;
+            margin-left: 9%;
+            margin-top: -3%;
+            transform: rotate(-4deg);
+            text-align: right;
+        }
+
+        @media all and (max-width: 800px) 
+        {
+            #seccion {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            article {
+                width: 100%;
+                margin-top: 75%;
+            }
+            aside {
+                width:100%;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Yoga Training  </h1> 
+        <h2> ¿Quieres especializarte en el yoga? </h2>
+    
+    </header>
+
+    <section id="seccion">
+
+        <article>
+            <p> Se cuentan por millones los ‘yoguis’, famosos y anónimos, que se declaran “enganchados” a una disciplina milenaria que nació en la India hace más de 4.000 mil años y que se ha popularizado de tal manera que hay una versión para cada necesidad. Desde los más contemporáneos como el Bikram yoga (el que se realiza a 42º de temperatura y es perfecto para eliminar toxinas) o el Aeroyoga (en el que literalmente te ‘cuelgas’ del techo y sientes la ingravidez), hasta los más puristas como el Sivanda Yoga o el Hatha Yoga, todos se basan en conectar cuerpo, mente y emociones utilizando la respiración y las posturas corporales. </p>
+            <p> A medio camino entre una actividad deportiva y un método de meditación, la práctica del yoga cautiva a quien la ejercita, todos los asiduos afirman que les ha cambiado la vida. ¿Lo mejor? La progresión en los movimientos la marcas tú y guiada por un buen maestro que mida las posibilidades de cada uno, es una disciplina para todos los públicos, de 0 a 90 años. ¿Por qué no probar algo que se puede realizar en cualquier lugar y cuyos beneficios holísticos están sobradamente avalados por la ciencia? Respira hondo y lee con atención todo lo que el Yoga puede hacer por ti. </p>
+            <p> Reduce la ansiedad y el estrés. Según un estudio realizado Ronald C. Kessler, sociólogo y profesor en el Harvard Medical School de Massachusetts, la practica habitual del yoga disminuye el estado de ansiedad y el estrés de manera similar al de una terapia médica convencional ( aquello de tomar ansiolíticos)</p>
+            <p> Aumenta la calidad del sueño y ayuda a dormir mejor. Otro estudio realizado por la Fundación para la investigación del Yoga Swami Vivekananda demostró que las personas que realizaban yoga tardaban 10 minutos menos de media en quedarse dormidas, e incrementaron el número de horas que dormían en un promedio de una hora más por noche. Además, expresaban la sensación de estar más descansadas por la mañana.</p>
+            <p> Se trabaja mejor. Si tu trabajo te agota, no te gusta o te mueves en un hábitat laboral muy competitivo, el yoga puede ayudarte a salir del atolladero sin cambiar de trabajo. De nuevo otro estudio hindú que analiza cinco indicadores del rendimiento laboral (satisfacción, compromiso, resultados, implicación emocional y relaciones sociales con los compañeros) ha demostrado que los beneficios del yoga se apreciaban para el trabajador en cuatro de los cinco puntos analizados, solamente el nivel de compromiso quedó exento de sus bondades. </p>
+        </article>
+
+        <aside>
+            
+            <figure class="polaroid rotate_1">
+                <img src="imagenes\yoga.png" alt="yoga 1" width="300" height="200">
+            </figure>
+        
+            <figure class="polaroid rotate_2">
+                <img src="imagenes\yoga2.png" alt="yoga 2" width="300" height="200">
+            </figure>
+        
+
+        </aside>
+
+    </section>    
+    
+</body>
+
+</html>
+

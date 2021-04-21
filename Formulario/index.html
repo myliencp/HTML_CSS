@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div id="formulario">
+        <form action="" method="GET">
+            <div id="nombre">
+                <label for="nombre">Nombre:</label>
+                <input type="text" size="32" maxlength="30" minlength="6" 
+                placeholder="Escriba nombre y apellidos" required>
+            </div>
+            <div id="nacimiento">
+                <label for="nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="nacimiento"> 
+            </div>
+            <div id="sexo">
+                <label for="genero">Sexo:</label>
+                <input type="radio" name="genero" value="h" required> Hombre
+                <input type="radio" name="genero" value="m" required checked> Mujer
+            </div>
+            <div id="fecha">
+                <label for="fecha">Fecha:</label>
+                <input type="datetime-local" name="fecha" value="2021-02-04T12:00" min="2020-06-04T00" 
+                 max="2022-06-04T00"> 
+            </div>
+                 <!-- para poner una imagen como boton submit -->
+                 <!-- <input type="image" src="img/slide 1.jpg" width="100px" height="100px" alt="submit"> -->
+            <div id="color">
+                 <label for="miColor">Seleccione Color:</label>
+                 <input type="color" name="miColor" value="#ff1234">
+            </div>
+            <div id="fichero">
+                 <label for="miFichero">Seleccione Fichero:</label>
+                 <input type="file" name="miFichero">
+            </div>
+            <div id="listado">
+                <label for="coches">Listado de Coches</label>
+                <select name="lista" id="lista">
+                    <option value="Lamborgini">Lamborgini</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Porsche">Porsche</option>
+                </select>
+
+            </div>
+            <div id="correo">
+                <label for="correo">Correo Electronico:</label>
+                <input type="email" size="32" placeholder="ejemplo@mail.es" >                
+            </div>
+            <div id="comentario">
+                <label for="comentario">Comentarios:</label>
+                <textarea name="comentario" id="" cols="30" rows="5" size="32" placeholder="Danos tu mensaje"></textarea>                 
+            </div>
+            <div id="boton">
+                <input id="submit" type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

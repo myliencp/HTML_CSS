@@ -1,0 +1,71 @@
+img {
+    width: 200vw;
+    height: 50vh;
+}
+.carousel {
+    position: relative;
+}
+   
+.casa{
+    display: flex;
+    justify-content: left;
+    
+}
+
+.caracteristicas {
+    text-align: justify;
+    margin-left: 10px;
+}
+
+
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    /* transition: opacity 2s ease-out; esto es para hacer una transicion fluida */
+}
+
+.carousel-item img {
+    max-width: 100%;
+}
+
+.carousel-control {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+@media all and (max-width: 800px) {
+    .casa{
+        display: flex;
+      
+        
+    }
+
+
+}
+
+

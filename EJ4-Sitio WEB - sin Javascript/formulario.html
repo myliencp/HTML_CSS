@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="formulario.css" />
+    <title>Ejemplo nuevos controles</title>
+</head>
+<header>
+    <p id="titulo1">Ficha de afiliacion</p>
+</header>    
+<body>
+    <div class="dato" >
+        <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label>Nombre:</label>
+                    <input  type="text" name="name_control" autofocus required />
+                    <label>Correo: </label>
+                    <input  type="email" name="email_control" required />
+                    <label>URL: </label>
+                    <input  type="url" name="url_control" placeholder="Escribe la URL de tu página web personal" />
+                </fieldset> 
+                <fieldset>
+                    <div id="islas">
+                        <label>Isla</label><p></p>
+                        <input type="radio" name="Isla" value="1"> Tenerife
+                        <input type="radio" name="Isla" value="2"> Gran Canaria
+                        <p></p>
+                        <input type="radio" name="Isla" value="3"> El Hierro
+                        <input type="radio" name="Isla" value="4"> La Gomera
+                        <p><p>
+                        <input type="radio" name="Isla" value="5"> La Palma
+                        <input type="radio" name="Isla" value="6"> Lanzarote
+                        <p></p>
+                        <input type="radio" name="Isla" value="7"> Fuerteventura
+                    </div>  
+                    <label>Fecha Nac.:</label><input type="date" name="date_control" />
+                    <label>Teléfono:</label><input type="tel" name="telefono" />
+                    <div id="licencia">
+                        <label>Lic. Federativa:</label> <input type="checkbox" name="licencia" />
+                    </div>                        
+                </fieldset>  
+                <div id="botones">
+                    <p>
+                        <input id="borrar" type="reset" value="Borrar">
+                        <input id="enviar" type="submit" value="Enviar">
+                    </p>
+                </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- Pagina web con datos adicionales
+https://www.arkaitzgarro.com/css2/capitulo-9.html-->

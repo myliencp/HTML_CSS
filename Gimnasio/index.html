@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossfit Center</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="carousel.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Pagina web de la cual sacar el codigo para los accesos a facebook
+    https://developers.facebook.com/docs/plugins/like-button?locale=es_ES  -->
+  </head>
+
+  <body>
+      <!-- el Header se va a dividir en tres partes dos a la izquierda logo y nombre de la empresa
+    y a la derecha se va a poner un cuadro con la dirección y el teléfono-->
+    <header>
+      <div id="imagen">
+        
+         <picture>
+          <source media="(min-width: 1200px)"srcset="Imagenes/logo150.jpg"/>
+          <source media="(min-width: 800px)" srcset="Imagenes/logo100.jpg" />
+          <source media="(min-width: 480px)" srcset="Imagenes/logo50.jpg" />
+          <img src="Imagenes/logo150.jpg" alt="Logo" />
+        </picture> 
+      </div>
+
+      <div id="nombre">
+        <h1 class="tracking-in-expand">Crossfit Center</h1>
+        <h2>"La fuerza no viene de una capacidad física. Viene de una voluntad indomable."</h2>
+      </div>
+
+      <!-- <div id="direccion">
+        <p>Dirección</p>
+        <p>Calle Galicia s/n, Torviscas Alto, Adeje </p>
+        <p>38660,Tenerife</p>
+      </div> -->
+      
+     
+
+    </header>
+    <nav class="navegacion">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="topnav" id="myTopnav">
+        <a href="frame1Slide/frame1Slide.html" target="elframe" class="active">Inicio</a>
+        <a href="framecross/framecross.html" target="elframe" >Qué es Crossfit</a>
+        <a href="framebox/framebox.html" target="elframe" >Nuestro Box</a>
+        <a href="framehorario/framehorario.html" target="elframe" >Horarios</a>
+        <a href="framemapa/framemapa.html" target="elframe">Dónde estamos</a>
+        <a href="framecontacto/framecontacto.html" target="elframe"  >Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>  
+  
+        
+             
+      </div>
+   
+    </nav>  
+
+    <!-- cuerpo principal -->
+
+    <div id="cuerpo">
+      
+      <article style="margin: 0px; padding: 0px; overflow: hidden">
+        <iframe
+          name="elframe"
+          src="frame1Slide/frame1Slide.html"
+          frameborder="0"
+          style="overflow: hidden; height: 100%; width: 100%"
+          height="100%"
+          width="100%"
+        ></iframe>
+      </article>
+
+      <aside>
+        <ul class="news">
+          <h5>Noticias</h5>
+          <li>
+            <a
+              href="https://www.menshealth.com/es/fitness/a35307488/open-crossfit-2021-espanoles/" target="_blank">
+            OPEN CROSSFIT 2021.</a>
+
+            <h3>NEW COVID RESTRICTIONS</h3>
+            <p>NOS OBLIGAN A CERRAR A PARTIR DE ESTE SABADO 19 DE DICIEMBRE, POR AL MENOS 2 SEMANAS.
+              AVISAREMOS CUANTO ANTES SOBRE LA RE-APERTURA AUNQUE CREEMOS QUE SERÁ DESPUÉS DE REYES.</p>   
+          </li>
+          <li>
+            <h3>SOCIOS:</h3>
+            <p>PODRÁN LLEVARSE PRESTADA 1 MANCUERNA POR PERSONA, IGUAL QUE LA OTRA VEZ, PORFAVOR NO PEDIR MÁS, ENTIENDAN QUE NO HAY MATERIAL PARA TODOS.
+              APROVECHEN PARA COGERLA ESTE VIERNES 18’ Y SINO WHATSAPP AL 679158193.</p>
+            <p>LA MENSUALIDAD PAGADA DEL MES DE DICIEMBRE QUEDA CONGELADA, Y PODRÉIS DISFRUTAR EL TIEMPO PERDIDO EL MES DE ENERO.</p> 
+          </li>       
+          
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="Imagenes/logo50.jpg">
+				<h3><span>Términos y Condiciones</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Privacidad</a>
+					|
+					<a href="#">Legal</a>
+					|
+					<a href="#">Cookies</a>
+					|
+				</p>
+
+				<p class="footer-company-name">© 2021 Crossfit Center </p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Calle Galicia, Torviscas Alto, Adeje 38660,Tenerife</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+34 922 719 582</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:crossfitcenter@gmail.com">crossfitcenter@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about"><span>Siguenos en nuestras redes sociales:</span></p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer> 
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

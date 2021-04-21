@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #cbcdd1;
+}
+
+header{
+	width: 100%;
+	background: url('imagenes/zoo.jpg');
+}
+h1,h2 {
+	color: blue;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+.menu {
+	margin-left: 35%;
+}
+.menu > li{
+	float: left;
+}
+
+.menu li a {
+	background-color:#000;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+
+.menu li a:hover {
+	background-color:#434343;
+}
+
+.menu li ul {
+	display:none;
+	position:absolute;
+	min-width:100px;
+}
+
+.menu li:hover > ul {
+	display:block;
+}
+
+.menu li ul li {
+	position:relative;
+}
+
+.menu li ul li ul {
+	right:-140px;
+	top:0px;
+}
+

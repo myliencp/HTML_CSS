@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>Pateando Tenerife</title>
+    </head>
+   
+    <!--[if IE 6 ]><body class="ie6 old_ie"><![endif]-->
+    <!--[if IE 7 ]><body class="ie7 old_ie"><![endif]-->
+    <!--[if IE 8 ]><body class="ie8"><![endif]-->
+    <!--[if IE 9 ]><body class="ie9"><![endif]-->
+    <!--[if !IE]><!--><body><!--<![endif]-->
+
+        <!-- instrucciones para el manejo de paginas-->
+     
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(e){
+                $('#menu1').on('click', function(){
+                $('#contenido').attr('src','principal.html');   
+                });
+                $('#menu2').on('click', function(){
+                $('#contenido').attr('src','rutas.html');   
+                });
+                $('#menu3').on('click', function(){
+                $('#contenido').attr('src','formulario.html');   
+                });                
+                $('#menu4').on('click', function(){
+                $('#contenido').attr('src','pagina1.html'); 
+                });
+            });
+
+        </script>
+
+        <!-- Manejo de la nieve -->
+        <!-- http://develoteca.com/jquery-snow-efecto-nieve-jquery-toque-navideno/ -->
+        <!-- https://www.youtube.com/watch?v=gjt-6-qI_tA-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+        <script src="jquery.snow.js"></script>
+
+
+        <div id="main_wrapper">
+            <header>
+                <img div="header-logo" src="imagenes/Logoten.png" alt="Logo" id="logo" />
+
+                <div id="main_title">
+                    <p><h1 id="titulo1">Pateos por Canarias</h1></p>
+                    <h2>Senderos de Tenerife</h2>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#" id="menu1">Principal</a></li>
+                        <li><a href="#" id="menu2">Pateos</a></li>
+                        <li><a href="#" id="menu3">Apuntate</a></li>
+                        <li><a href="#" id="menu4">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <div id="banner_image">
+                <div id="banner_description">
+                    Experiencias en mis senderos por Tenerife.
+                    <a href="#" class="red_button">Vea articulo <img src="imagenes/small_arrow.png" alt="" /></a>
+                </div>
+            </div>
+            
+            <section>
+                <article>
+                    <!-- Poner un iframe -->
+                    <!-- <iframe src="principal.html" width="660" height="280" scrolling="auto">
+                        Texto alternativo para navegadores que no aceptan iframes
+                    </iframe> -->
+                    <iframe id="contenido" src="principal.html" width="660" height="340" scrolling="auto">
+                        iFrames no soportado
+                    </iframe>
+                    <div id ="mutante"></div>
+                </article>
+                <aside>
+                    <h1>Acerca del autor</h1>
+                    <img  class="personal" src="imagenes/dardo.png"  alt="Imagen Dardo" />
+                    <p>Permita presentarme mi nombre es Dardo Schuster. Llevo mas de 20 años pateando Tenerife y pretendo seguir haciendolo y documentar dichos pateos</p>
+                    <div id="imagenes" class="centrado">
+                        <p><a href="https://www.facebook.com/dardoschuster"><img id="facebook" src="imagenes/facebook.png" alt="Facebook"></a><img src="imagenes/twitter.png" alt="Twitter" /><img src="imagenes/vimeo.png" alt="Vimeo" /></p>
+                    </div>
+                </aside>
+            </section>
+            
+            <footer>
+                <div id="tweet">
+                    <h1>Mi ultimo tweet</h1>
+                    <p>Holaaa</p>
+                    <p>12/05 23:12</p>
+                </div>
+                <div id="my_pictures">
+                    <h1>Mis Imágenes</h1>
+                    <p><a href="#titulo1"><img src="imagenes/pic1.jpg"  alt="Picture" /></a>
+                        <img src="imagenes/pic2.jpg" alt="Picture" />
+                        <img src="imagenes/pic3.jpg" alt="Picture" />
+                        <img src="imagenes/pic4.jpg" alt="Picture" />
+                    </p>
+                </div>
+                <div id="my_friends">
+                    <h1>Mis amigos</h1>
+                    <ul>
+                        <li><a href="https://www.mptodos.org/">Montaña para todos</a></li>
+                        <li><a href="https://www.visitarcanarias.com/senderismo-en-las-islas-canarias">Visitar Canarias</a></li>
+                        <li><a href="https://www.facebook.com/senderos.canariasclimb/">Canarias Climb</a></li>
+                        <li><a href="https://clubmontanerosdenivaria.blogspot.com/">Montañeros Nivaria</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.gmtenerife.org/">Grupo Montañero de Tenerife</a></li>
+                        <li><a href="https://www.atletassinfronteras.com/">Atletas sin Fronteras</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+[javascript]
+$(document).ready( function(){
+$.fn.snow();
+});
+[/javascript]    

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa del Vino de Tenerife</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"/>
+    <link rel="icon"  type="image/png" href="iconos/favicon.png">
+
+</head>
+<body>
+    <!-- Cabecera compuesta por 4 apartados: Direccion,Web, Telefono e Idiomas -->
+    <header>   
+        
+        <div id="zona1">            
+            <ul>
+              <li>
+                <a id="direccion" href=""
+                  >C/ San Simón 49. 38360. El Sauzal. Santa Cruz de Tenerife. Islas
+                  Canarias</a
+                >
+              </li>
+              <li>
+                <a id="pagina" href="casadelvino@teneriferural.org"
+                  >casadelvino@teneriferural.org</a
+                >
+              </li>
+              <li><a id="telefono" href="tel:+922315445">+34 922 57 25 35 </a></li>
+            </ul>
+            <div class="idiomas">
+                <button onclick="cambiaIdioma()" id="boton" class="boton es">Español</button>
+                <div id="desplegable" class="desplegable">
+                    <a onclick="selIdioma()" id="ingles" class="gb" href="#">Ingles</a>
+                    <a onclick="selIdioma()" id="aleman" class="de" href="#">Aleman</a>
+                    <a onclick="selIdioma()" id="frances" class="fr" href="#">Frances</a>
+                    <a onclick="selIdioma()" id="español" class="es" href="#">Español</a>
+                </div>
+            </div>    
+        </div>       
+    </header>
+    <!-- Navegador que consta de Menu Responsive con Submenus con Logo -->
+    <nav class="navegacion">
+        <!-- Codigo para que el tamaño del logo cambie según resolucion de la pantalla -->
+        <div id="logo">
+            <picture>
+                <source media="(min-width:1200px )" srcset="imagenes/Logo.png">
+                <source media="(min-width:800px )" srcset="imagenes/logo150.png">
+                <source media="(min-width:480px )" srcset="imagenes/logo100.png">                    
+                <img src="imagenes/150x150.png" alt="">
+            </picture>
+        </div>
+      <!-- Listado con el menu responsive + submenus que aparece como barra lateral segun resolucion pantalla -->
+      <ul>
+        <div class="topnav" id="myTopnav">
+            <div class="lacasa"> 
+                <button class="lacasab">LA CASA
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="lacasa-content">
+                    <a href="#">Tarifas y Servicios</a>
+                    <a href="#">Horarios</a>
+                    <a href="#">Dossier</a>
+                </div>
+            </div>
+          
+            <a href="#">VINOTECA Y TIENDA</a>
+
+            <div class="museos">
+                <button class="museosb">MUSEOS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="museos-content">
+                    <a href="#">Museo del Vino</a>
+                    <a href="#">Centro de visitantes de la Miel de Tenerife</a>
+                    <a href="#">Centro de interpretación de la agrodiversidad</a>
+                    <a href="#">Los medianeros de la Hacienda San Simón</a>
+                    <a href="#">Capilla de San Simon</a>
+                </div>
+            </div> 
+
+            <div class="salas">
+                <button class="salasb">SALAS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="salas-content">          
+                    <a href="#">Sala de degustación</a>
+                    <a href="#">Sala de eventos y exposiciones</a>
+                </div>
+            </div>
+
+            <a href="#">RESTAURANTE Y TERRAZA</a>
+            <a href="#">GALERIA</a>
+            <a href="#">CONTACTAR</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>            
+        </div>
+       </ul>            
+       <!-- Buscador -->
+       <!-- <li id="busqueda">
+            <form action="../../form-result.php" method="post" target="_blank">
+                <p>
+              
+                  <input type="search" name="busqueda" size="4" maxlength="4">      
+                  <input type="submit" value="Buscar">
+              
+                </p>
+              
+            </form>      
+       </li> -->
+    </nav>
+
+    <!-- Carousel de imágenes con slide -->
+
+    <article >
+        <div class="carousel-inner">
+          <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+          <div class="carousel-item">
+              <img id="slide" src="imagenes/vino1.jpg">
+          </div>
+          <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+          <div class="carousel-item">
+              <img id="slide"  src="imagenes/vino2.jpg">
+          </div>
+          <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+          <div class="carousel-item">
+              <img id="slide" src="imagenes/vino3.jpg">
+          </div>
+         
+          <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+          <label for="carousel-2" class="carousel-control next control-1">›</label>
+          <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+          <label for="carousel-3" class="carousel-control next control-2">›</label>
+          <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+          <label for="carousel-1" class="carousel-control next control-3">›</label>
+      </div>  
+    </article>
+
+    <!-- Mapa interactivo sobre la ubicacion del lugar -->
+    
+    <article >
+        <div id="mapawebcam">
+            <div class="webcam">
+                <h2>WEBCAM</h2>
+                <a href="https://www.skylinewebcams.com/es/webcam/espana/canarias/santa-cruz-de-tenerife/el-sauzal.html" 
+                   target="_blank"><img src="https://embed.skylinewebcams.com/img/1013.jpg" alt="Cámara web en tiempo real El Sauzal - Tenerife"></a>
+                <p>El Sauzal, vista panorámica del Teide y Puerto de la Cruz desde La Casa del Vino</p>
+            </div>
+
+            <div class="mapa">
+                <h2>CÓMO LLEGAR</h2>      
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                 src="https://www.openstreetmap.org/export/embed.html?bbox=-16.43591701984406%2C28.469863152332007%2C-16.4323765039444%2C28.47180835575449&amp;layer=mapnik&amp;marker=28.470835758519932%2C-16.434146761894226" 
+                 style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=28.47084&amp;mlon=-16.43415#map=19/28.47084/-16.43415">Ver mapa más grande</a></small>
+            </div>
+            <div class="tripadvisor">
+                <h2>RECOMENDADOS</h2>
+                <img id=trip src="Imagenes/tripadvisor.png" alt="">
+                <h1>Qué dicen los viajeros</h1>
+                <p>"Inolvidable el poder conocer la riqueza y la historia de agrodiversidad de la isla"</p>
+                <p>"Para tomar un café, una copa o comer en un ambiente inmejorable. Vistas al mar y al Teide."</p>
+
+            </div>
+
+        </div>   
+
+        
+
+    </article>
+    
+   <!-- Informacion sobre la Fundacion Canaria y links a Redes Sociales -->
+
+   <article id="abajo">
+        <div class="fundacion">
+             <h3>La Casa del Vino de Tenerife está gestionada por la <a href="https://www.teneriferural.org/"> FUNDACION CANARIA TENERIFE RURAL</a></h3>
+        </div>
+        <div class="rrss">
+                <h4>Síguenos en:</h4> 
+                <div class="social">
+                    <a href="#"><img src="Imagenes/face40.jpg" alt="facebook"></a>
+                    <a href="#"><img src="Imagenes/instagram40.jpg" alt="instagram"></a>
+                    <a href="#"><img src="Imagenes/twitter40.jpg" alt="twitter"></a>
+                </div>
+        </div>       
+
+   </article>  
+    
+
+    <footer>
+        
+        <div id="contenedor">
+            
+            <div class="item1">
+                <p><img id="logo2" src="imagenes/logo2.jpg" alt=""></p>
+                <p>La Casa del Vino de Tenerife es una digna <br>
+                        representante de las haciendas rústicas que, ubicadas <br>
+                        en las medianías del norte de Tenerife, se han <br>
+                        conservado en el tiempo.
+                </p>
+            </div>
+            
+            <div class="item2">
+                <ul>
+                    <h2>CONTACTO</h2>
+                    <li>                   
+                        <a id=direccion href="">Dirección: Calle San Simón, 49, 38360 El Sauzal, Santa Cruz de Tenerife</a>
+                    </li>
+                    <li>
+                        <a id=telefono href="">Teléfono: +34 922 57 25 35</a>
+                    </li>
+                    <li>
+                        <a id="pagina" href="">Email: casadelvino@teneriferural.org</a>
+                    </li>
+                    <li>
+                        <a id="web"  href="">Web: https://www.casadelvinotenerife.com</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="item3">
+                    <h2>ENLACES DE INTERÉS</h2>
+                    <li><a href="">Portal de transparencia</a></li>
+                    <li><a href="">Aviso legal</a></li>
+                    <li><a href="">Política de cookies</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                    <li><a href="">Registro de actividades de tratamiento</a></li>
+                    <li><a href="">Ejercicio de derechos</a></li>
+                    <li><a href="">Delegado de protección de datos</a></li>                  
+                  
+                
+            </div>
+        </div>
+
+    </footer>
+    <script>
+        function cambiaIdioma() {
+            document.getElementById("desplegable").classList.toggle("mostrar");    
+        }
+        function selIdioma() {
+            console.log(event.target);
+            document.getElementById("boton").innerHTML = event.target.innerHTML;
+            document.getElementById("boton").classList ="";
+            document.getElementById("boton").classList =event.target.classList;
+            document.getElementById("boton").classList.add("boton");
+                    
+        }
+        window.onclick = function(event){
+            if (!event.target.matches("#boton") && document.getElementById
+            ("desplegable").classList.contains("mostrar")){
+                cambiaIdioma();
+            }
+        }
+    </script>
+
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dónde estamos</title>
+</head>
+
+<style>
+    body {
+            font:Helvetica;
+            background-image: url(imagenes/fondo3.jpg);
+            text-align: center;
+    }
+
+    h2{
+        color: white;
+    }
+  #direccion{
+    color: white;
+    text-decoration: none;  
+  }
+  #pagina{
+    color:white;
+    text-decoration: none;
+  }
+  #telefono{
+    color: white;
+    text-decoration: none;
+  }
+  #web{
+    color: white;
+    text-decoration: none;
+  }
+
+  /* ICONOS */
+  #telefono:before {
+    content: "\2706";
+    color:blanchedalmond;
+    margin-right: 10px;
+  }
+  #pagina:before {
+    content: "\1F582";
+    color: white;
+    margin-right: 10px;
+    font-size:large;
+  }
+  #direccion:before {
+    content: "\1F4CC";
+    color: black;
+    margin-right: 10px;
+  }
+
+  #web:before{
+    content: "\1F30E";
+    color: black;
+    margin-right: 10px;
+  }
+  li{
+    list-style-type: none;
+  }
+  a{
+    text-decoration-style: none;
+    color: white;
+  }
+ 
+
+  </style>
+<body>
+     
+    <div class="diremapa">
+        <div id="dire">
+            <ul>
+                <h2>NOS ENCONTRARÁS EN:</h2>
+                <li>                   
+                    <a id=direccion href="">Dirección: Calle Galicia s/n, Torviscas Alto, Adeje 38660,Tenerife</a>
+                </li>
+                <li>
+                    <a id=telefono href="">Teléfono: +34922 719 582</a>
+                </li>
+                <li>
+                    <a id="pagina" href="">Email: crossfitcenter@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a id="web"  href="">Web: www.crossfitcenter.com</a>
+                </li>
+               
+            </ul>
+
+        </div>
+        <div id="mapa">   
+            <iframe width="800" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-16.715717017650608%2C28.092279645765814%2C-16.71389847993851%2C28.09410161881077&amp;layer=mapnik" 
+            style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/28.09319/-16.71481">Ver mapa más grande</a></small>
+        </div>
+    
+</body>
+</html>

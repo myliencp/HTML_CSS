@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<header>
+    <div id="main_title">
+        <h1 id="titulo1">FORMULARIO DE CONTACTO</h1>
+        <h3>Cuando encontremos tu casa ideal, te mandaremos un email.</h3>
+    </div>
+<body>
+    <div id="Datos Básicos">
+        <form action="" oninput="range_control_value.value = range_control.valueAsNumber">
+                <fieldset id="datos">
+                    <legend>Datos personales</legend>
+                    <p>Nombre: <input  id="nombre" name="name_control" autofocus required /></p>
+                    <p>Apellidos:<input  id="apellidos" name="apellidos_control" autofocus required /></p>   
+                    <p>Dirección: <input type="text" name="dire_control" ></p>                                      
+                    <p>Teléfono: <input type="tel" name="tel_control" pattern="[0-9]{9}" required/></p>
+                    <p>Correo Electrónico: <input id="correo" type="email" name="email_control" required /></p>                       
+                    
+                </fieldset> 
+                
+                <fieldset id="propiedad">
+                    <legend>Datos de la propiedad que busca</legend>
+                    <div class="datospro">
+                      <p>Zona: 
+                        <select name="zona" id="zona">
+                            <option value="Casa Terrera">Garafía</option>
+                            <option value="">Tijarafe</option>
+                            <option value="Chalet">Puntagorda</option>
+                            <option value="Adosado">Tazacorte</option>
+                            <option value="Piso">Los Llanos de Aridane</option>
+                            <option value="">El Paso</option>
+                            <option value="">Fuencaliente</option>
+                            <option value="">Barlovento</option>
+                            <option value="">San Andrés y Sauces</option>
+                            <option value="">Puntallana</option>
+                            <option value="">Santa Cruz de La Palma</option>
+                            <option value="">Breña Alta</option>
+                            <option value="">Breña Baja</option>
+                            <option value="">Villa de Mazo</option>
+                            
+                      </select>
+                    
+                     </p>
+                      <p>Tipo:
+                          <select name="tipo" id="tipo">
+                                <option value="Casa Terrera">Casa Terrera </option>
+                                <option value="Chalet">Chalet</option>
+                                <option value="Adosado">Adosado</option>
+                                <option value="Piso">Piso</option>
+                          </select>     
+                      </p>
+                      <fieldset id="dorm">
+                        <legend>Cantidad de Dormitorios Minimos: </legend>
+                        <input type="radio" name="dorm" value="1" checked> 1
+                        <input type="radio" name="dorm" value="2" > 2
+                        <input type="radio" name="dorm" value="3" > 3
+                        <input type="radio" name="dorm" value="4" > 4
+                        <input type="radio" name="dorm" value="5+"> 5+
+                      </fieldset>
+                      <fieldset id="bath">
+                        <legend>Cantidad de Baños Minimos: </legend>
+                        <input type="radio" name="bath" value="1" checked> 1
+                        <input type="radio" name="bath" value="2" > 2
+                        <input type="radio" name="bath" value="3+" > 3+                    
+                      </fieldset>
+                      <fieldset id="m2">
+                        <legend>Tamaño minimo de la vivienda(m2):</legend>
+                        <input type="radio" name="m2" value="50" checked> 50
+                        <input type="radio" name="m2" value="80" > 80
+                        <input type="radio" name="m2" value="100" > 100
+                        <input type="radio" name="m2" value="150+" > 150+                   
+                      </fieldset>
+                    </div>
+                      <p>Garaje: <input type="checkbox" name="garage" id="gg1"></p>
+                      <p>Piscina: <input type="checkbox" name="piscina" id="pc1"></p>
+
+
+                    
+                </fieldset>
+              
+                <div id="botones">
+                    <p>
+                        <input id="borrar" type="reset" value="Borrar">
+                        <input id="enviar" type="submit" value="Enviar" />
+                    </p>    
+                </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- Pagina web con datos adicionales
+https://www.arkaitzgarro.com/css2/capitulo-9.html-->

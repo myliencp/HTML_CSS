@@ -1,0 +1,222 @@
+body {
+  font: Arial, Helvetica, sans-serif;
+  background: url(Imagenes/fondo2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+header {
+  background: url(Imagenes/fondo\ header.jpg) no-repeat; 
+  -webkit-background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  font-size: 100%;
+  margin: 4px;
+  padding: 5px;
+  min-height: 100px;
+}
+header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  line-height: 1em;
+  color:black;    
+  margin-left: 15px;   
+}
+
+
+/*imagen del logo */
+#imagen img {
+  max-width: 150px;
+  padding: 5px;
+  border-radius: 40%;
+}
+
+
+
+article {
+  height: 500px;
+  min-height: 700px;
+  margin: 0px;
+  padding: 0px;
+  min-height: calc(100vh - 100px);
+}
+
+ul, ol{ 
+  list-style: none; /* QUITO VIÑETAS */
+  padding-inline-start: 10px;
+  display: block;
+}
+
+
+
+
+
+/* Cuando hay muy poco ancho para 3 columnas */
+
+@media all and (max-width: 800px) {
+
+
+
+
+  header h1 {
+      font-size: 1.5em;
+  }
+
+  header h2 {
+      font-size: 0.8em;
+      line-height: 0.8em;
+  }    
+
+  #imagen img {
+      max-width: 80%;
+  } 
+}
+/* ESTILO DEL PIE DE PAGINA */
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 4px;
+  padding: 5px;
+  min-height: 50px; 
+  color: white;
+}
+
+.footer-distributed{
+background-color: #333;
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 50px 50px 60px 50px;
+margin-top: 80px;
+}
+
+.footer-distributed .footer-left,.footer-distributed .footer-center{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  
+margin-left: 5%;
+width: 20%;
+}
+
+.footer-distributed h3{
+color:  green;
+font: normal 22px arial, cursive;
+margin: 0;
+}
+
+
+.footer-distributed h3 span{
+color:  green;
+}
+
+
+
+.footer-distributed .footer-company-name{
+color:  #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+margin-left: 5%;
+width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+background-color:  green;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+}
+
+
+.footer-distributed .footer-center p{
+display: inline-block;
+color: #ffffff;
+vertical-align: middle;
+margin:0;
+}
+
+
+@media (max-width: 880px) {
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-distributed .footer-center i{
+  margin-left: 0;
+}
+
+}
+
+
+/* animacion del header 
+hecha con: https://animista.net/
+es solo copiar el codigo que te dan y ponerle la clase a tu elemento */
+.tracking-in-contract-bck-bottom {
+-webkit-animation: tracking-in-contract-bck-bottom 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        animation: tracking-in-contract-bck-bottom 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* animacion del header 
+hecha con: https://animista.net/
+http://css3generator.com/
+*/

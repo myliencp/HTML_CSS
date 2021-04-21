@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que es Crossfit</title>
+    <style>
+        body {
+            font:Helvetica;
+            background-image: url(imagenes/fondo2.jpg);
+        }
+ 
+        #seccion {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /* width: 80%;
+                color: black;
+                margin: 0.5em; */
+            }
+
+           
+    
+            article {
+                width: 60%;
+                color: white;
+                /* float: left; */
+                text-align: justify;
+                line-height: 1.5em;
+            }
+            p{
+                color:black;
+                font-weight: bold;
+            }
+    
+            aside {
+                /* float: left; */
+                width: 40%;
+            }
+    
+            /*efecto polaroid */
+            figure.polaroid {
+                position: absolute;
+                width: 250px;
+                padding: 10px 10px 20px 10px;
+                border: 1px solid gray;
+                background-color: white;
+                box-shadow: 10px 10px 5px white;
+            }
+
+            figure.rotate_3 {
+                z-index: 5; /*este es la tercera*/
+                float: right;
+                margin-left: 10%;
+                margin-top: calc(12% + 5vw);
+                transform: rotate(-12deg);              
+            }   
+
+                   
+            figure.rotate_1 {
+                z-index: 4; /*este es la segunda*/
+                float: left;
+                margin-left: 5%;
+                margin-top: calc(5% + 5vw);
+                transform: rotate(8deg);
+            }
+            figure.rotate_2 {
+                z-index: 3; /*este es la primera*/
+                float: right;
+                margin-left: 9%;
+                margin-top: 1%;
+                transform: rotate(-4deg);
+                text-align: right;
+            }
+           
+    
+            @media all and (max-width: 800px) 
+            {
+                #seccion {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    
+                }
+                article {
+                    width: 100%;
+                    margin-top: 75%;
+                }
+                aside {
+                    width:100%;
+                }
+    
+            }
+        </style>
+    
+</head> 
+
+
+<body>
+    <section id="seccion">
+
+                <article>
+            <h2>EMPECEMOS POR QUÉ NO ES CROSSFIT:</h2>
+            <p>Para nosotros no es un remedio más para ponerse en forma, no es una clase que se imparte en un gimnasio convencional junto a otras clases colectivas y sobre todo, no es un método de entrenamiento más que pueda usar cualquier entrenador que no haya vivido antes el crossfit como es debido.</p>
+            <p>Porque crossfit no es cualquier ejercicio combinado con otros formando un circuito, no es cualquier ejercicio funcional, no es cardio, no es ponerte grande, y no es lesionarte por levantar peso.</p>
+            <h2>PARA NOSOTROS CROSSFIT ES:</h2>
+            <h3>Para todos.</h3>
+            <p>No hay límite. Desde el atleta de elite hasta nuestra abuela puede y debe mejorar su condición física.</p>
+            <h3>Aumentar tu capacidad de trabajo.</h3>
+            <p>Serás más fuerte, más rápido y más resistente para cualquier tarea, en cualquier momento.</p>
+            <h3>Adaptar tu cuerpo al esfuerzo.</h3>
+            <p>Sufrirás una considerable disminución de grasa corporal y aumentarás la masa muscular. No te pones grande, te pondrás fuerte.</p>
+            <h3>Dominio corporal.</h3>
+            <p>Consideramos primordial la flexibilidad, coordinación, agilidad, equilibrio, precisión y técnica de movimiento. La resistencia, la fuerza, la potencia y la velocidad vienen con el tiempo.</p>
+            <h3>Progresiones de ejercicios.</h3>
+            <p>El 80% de los ejercicios que usamos resulta que son técnicamente complicados, no es llegar y venga. Para aprender a hacerlos usamos progresiones. Una progresión es simplificar un movimiento en varios pasos sencillos hasta llegar a hacer bien el movimiento original. En ocasiones cada persona necesita una progresión personalizada según sus puntos débiles. El entrenador debe ser capaz de localizar ese punto débil y aplicar la progresión adecuada.</p>
+
+        </article>
+
+        <aside>
+            
+            <figure class="polaroid rotate_1">
+                <img src="imagenes/gym1.png" alt="alicia 1" width="250" height="200">
+            </figure>
+        
+            <figure class="polaroid rotate_2">
+                <img src="imagenes/gym7.png" alt="alicia 2" width="250" height="200">
+            </figure>
+
+            <figure class="polaroid rotate_3">
+                <img src="imagenes/gym8.png" alt="alicia 2" width="250" height="200">
+            </figure>
+          
+
+        </aside>
+
+    </section>    
+
+    
+</body>
+</html>

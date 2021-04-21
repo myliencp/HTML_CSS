@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="contactostyle.css" />
+    <title>Inscripción Gimnasio</title>
+</head>
+<header>
+    <div id="main_title">
+        <h1 id="titulo1">FORMULARIO DE CONTACTO</h1>
+        <h3>Rellena la ficha y ven a entrenar con nosotros.*Solo válido para nuevos clientes*</h3>
+    </div>
+<body>
+    <div id="Datos Básicos">
+        <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+                <fieldset id="datos">
+                    <legend>Datos personales</legend>
+                    <p>Nombre: <input  id="nombre" name="name_control" autofocus required /></p>
+                    <p>Apellidos:<input  id="apellidos" name="apellidos_control" autofocus required /></p>                                
+                    <p>Teléfono: <input type="tel" name="tel_control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/></p>
+                    <p>Código Postal <input type="number" name="cp_control" min="38000" max="38999"required></p>                    
+                    <p>Fecha de nacimiento: <input type="date" name="date_control" />
+                    <p>Correo Electrónico: <input id="correo" type="email" name="email_control" required /></p>                  
+                    
+                </fieldset> 
+                
+                <fieldset id="listado">
+                    <legend>¿Por qué contactas con nosotros?</legend>
+                        <div id="razones">
+                            <select name="razon" id="razon">
+                                <option value="Me interesa entrenar ">Me interesa entrenar </option>
+                                <option value="Soy proveedor">Soy proveedor</option>
+                                <option value="Busco colaboración">Busco colaboración</option>
+                                <option value="Quiero alquilar el espacio">Quiero alquilar el espacio</option>
+                            </select>                            
+                        </div>
+                    
+                </fieldset>
+                <fieldset id="comentario">
+                    <legend>Comentarios</legend>                        
+                    <textarea name="comentario" id="" cols="30" rows="5" size="32" placeholder="Si nunca has probado CrossFit hay varias cosas que debemos explicarte y darte a conocer. Siempre es más sencillo en persona o por teléfono, en cualquier caso puedes dejarnos tu mensaje aquí."></textarea>
+                </fieldset>
+                
+                <div id="botones">
+                    <p>
+                        <input id="borrar" type="reset" value="Borrar">
+                        <input id="enviar" type="submit" value="Enviar" />
+                    </p>    
+                </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- Pagina web con datos adicionales
+https://www.arkaitzgarro.com/css2/capitulo-9.html-->
